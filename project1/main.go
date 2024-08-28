@@ -33,6 +33,7 @@ func karatsuba(x *big.Int, y *big.Int) *big.Int {
 	z2 := karatsuba(upx, upy)
 
 	// combines the various numbers using bitshifting and subtracting
+	// (z2 × 10 ^ (m2 × 2)) + ((z1 - z2 - z0) × 10 ^ m2) + z0
 	unit1 := new(big.Int).Lsh(z2, uint(m2)*2)
 	unit2 := new(big.Int).Sub(z1, z2)
 	unit2 = new(big.Int).Sub(unit2, z0)
@@ -41,7 +42,7 @@ func karatsuba(x *big.Int, y *big.Int) *big.Int {
 }
 
 func main() {
-	j := "31415926535897932384626433832795028841971693993751058209749445929999999999999"
+	j := "3141592653589793238462643383279502884197169399375105820974944592"
 	k := "2718281828459045235360287471352662497757247093699959574966967627"
 	x := new(big.Int)
 	y := new(big.Int)

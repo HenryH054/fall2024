@@ -8,7 +8,7 @@ import (
 )
 
 func split_at(x *big.Int, m uint) (*big.Int, *big.Int) {
-	mask := new(big.Int).Lsh(big.NewInt(1), uint(m))
+	mask := x.Lsh(big.NewInt(1), uint(m))
 	mask.Sub(mask, big.NewInt(1))
 
 	// splits x down the middle
@@ -21,7 +21,7 @@ func split_at(x *big.Int, m uint) (*big.Int, *big.Int) {
 func karatsuba(x *big.Int, y *big.Int) *big.Int {
 	// base case multiplies numbers together once they are small enough
 	if x.Cmp(big.NewInt(2)) == -1 || y.Cmp(big.NewInt(2)) == -1 {
-		return new(big.Int).Mul(x, y)
+		return x.Mul(x, y)
 	}
 
 	// gets the middle of the numbers by binary length
@@ -40,14 +40,14 @@ func karatsuba(x *big.Int, y *big.Int) *big.Int {
 
 	// makes 3 recursive multiplcation calls to multiple each necessary part
 	z0 := karatsuba(lox, loy)
-	z1 := karatsuba(new(big.Int).Add(lox, upx), new(big.Int).Add(loy, upy))
+	z1 := karatsuba(x.Add(lox, upx), x.Add(loy, upy))
 	z2 := karatsuba(upx, upy)
 
 	// combines the various numbers using bitshifting and subtracting
-	// (z2 × 10 ^ (m2 × 2)) + ((z1 - z2 - z0) × 10 ^ m2) + z0
-	unit1 := new(big.Int).Lsh(z2, uint(m2)*2)
-	unit2 := new(big.Int).Sub(z1, z2)
-	unit2 = new(big.Int).Sub(unit2, z0)
+	// (z2 × 2 ^ (m2 × 2)) + ((z1 - z2 - z0) × 2 ^ m2) + z0
+	unit1 := x.Lsh(z2, uint(m2)*2)
+	unit2 := x.Sub(z1, z2)
+	unit2 = x.Sub(unit2, z0)
 	unit2 = unit2.Lsh(unit2, uint(m2))
 	return unit1.Add(unit1, unit2).Add(unit1, z0)
 }

@@ -3,7 +3,20 @@ package main
 import (
 	"fmt"
 	"math/big"
+	"math/bits"
+	"time"
 )
+
+func split_at(x *big.Int, m uint) (*big.Int, *big.Int) {
+	mask := new(big.Int).Lsh(big.NewInt(1), uint(m))
+	mask.Sub(mask, big.NewInt(1))
+
+	// splits x down the middle
+	lox := big.NewInt(1).And(x, mask)
+	upx := big.NewInt(1).Rsh(x, uint(m))
+
+	return upx, lox
+}
 
 func karatsuba(x *big.Int, y *big.Int) *big.Int {
 	// base case multiplies numbers together once they are small enough
@@ -13,19 +26,17 @@ func karatsuba(x *big.Int, y *big.Int) *big.Int {
 
 	// gets the middle of the numbers by binary length
 	m := max(x.BitLen(), y.BitLen())
-	m2 := m / 2
-
-	// generates a bit map so that I can and numbers to get the top and bottom halves
-	mask := new(big.Int).Lsh(big.NewInt(1), uint(m2))
-	mask.Sub(mask, big.NewInt(1))
+	m2 := uint(m / 2)
+	bitLen := uint(bits.Len(m2))
+	if m2 == (1 << (bitLen - 1)) {
+		m2 = 1 << (bitLen - 1)
+	} else {
+		m2 = 1 << (bitLen)
+	}
 
 	// splits x down the middle
-	lox := new(big.Int).And(x, mask)
-	upx := new(big.Int).Rsh(x, uint(m2))
-
-	// splits y down the middle
-	loy := new(big.Int).And(y, mask)
-	upy := new(big.Int).Rsh(y, uint(m2))
+	upx, lox := split_at(x, uint(m2))
+	upy, loy := split_at(y, uint(m2))
 
 	// makes 3 recursive multiplcation calls to multiple each necessary part
 	z0 := karatsuba(lox, loy)
@@ -48,5 +59,7 @@ func main() {
 	y := new(big.Int)
 	x.SetString(j, 10)
 	y.SetString(k, 10)
-	fmt.Printf("%d", karatsuba(x, y))
+	start := time.Now()
+	karatsuba(x, y)
+	fmt.Printf("\n %s", time.Since(start))
 }

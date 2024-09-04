@@ -62,6 +62,6 @@ func main() {
 	fmt.Printf("%d", karatsuba(x, y))
 	fmt.Printf("\n %s", time.Since(start))
 	start = time.Now()
-	fmt.Printf("%d", big.NewInt(0).Mul(x, y))
+	fmt.Printf("\n%d", big.NewInt(0).Mul(x, y))
 	fmt.Printf("\n %s", time.Since(start))
 }

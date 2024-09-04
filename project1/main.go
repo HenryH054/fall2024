@@ -7,48 +7,47 @@ import (
 	"time"
 )
 
-func split_at(x *big.Int, m uint) (*big.Int, *big.Int) {
-	mask := x.Lsh(big.NewInt(1), uint(m))
+func splitAt(x *big.Int, m2 uint) (*big.Int, *big.Int) {
+	// generates a bit map so that I can and numbers to get the top and bottom halves
+	mask := big.NewInt(0).Lsh(big.NewInt(1), uint(m2))
 	mask.Sub(mask, big.NewInt(1))
 
 	// splits x down the middle
-	lox := big.NewInt(1).And(x, mask)
-	upx := big.NewInt(1).Rsh(x, uint(m))
+	lox := big.NewInt(0).And(x, mask)
+	upx := big.NewInt(0).Rsh(x, uint(m2))
 
 	return upx, lox
 }
 
 func karatsuba(x *big.Int, y *big.Int) *big.Int {
 	// base case multiplies numbers together once they are small enough
-	if x.Cmp(big.NewInt(2)) == -1 || y.Cmp(big.NewInt(2)) == -1 {
-		return x.Mul(x, y)
+	if x.Cmp(big.NewInt(2)) == -1 && y.Cmp(big.NewInt(2)) == -1 {
+		return new(big.Int).Mul(x, y)
 	}
 
 	// gets the middle of the numbers by binary length
 	m := max(x.BitLen(), y.BitLen())
-	m2 := uint(m / 2)
-	bitLen := uint(bits.Len(m2))
+	m2 := m - (m >> 1)
+	bitLen := uint(bits.Len(uint(m2)))
 	if m2 == (1 << (bitLen - 1)) {
 		m2 = 1 << (bitLen - 1)
 	} else {
 		m2 = 1 << (bitLen)
 	}
-
-	// splits x down the middle
-	upx, lox := split_at(x, uint(m2))
-	upy, loy := split_at(y, uint(m2))
+	upx, lox := splitAt(x, uint(m2))
+	upy, loy := splitAt(y, uint(m2))
 
 	// makes 3 recursive multiplcation calls to multiple each necessary part
 	z0 := karatsuba(lox, loy)
-	z1 := karatsuba(x.Add(lox, upx), x.Add(loy, upy))
+	z1 := karatsuba(big.NewInt(0).Add(lox, upx), big.NewInt(0).Add(loy, upy))
 	z2 := karatsuba(upx, upy)
 
 	// combines the various numbers using bitshifting and subtracting
-	// (z2 × 2 ^ (m2 × 2)) + ((z1 - z2 - z0) × 2 ^ m2) + z0
-	unit1 := x.Lsh(z2, uint(m2)*2)
-	unit2 := x.Sub(z1, z2)
-	unit2 = x.Sub(unit2, z0)
-	unit2 = unit2.Lsh(unit2, uint(m2))
+	// (z2 × 10 ^ (m2 × 2)) + ((z1 - z2 - z0) × 10 ^ m2) + z0
+	unit1 := big.NewInt(0).Lsh(z2, uint(m2)*2)
+	unit2 := big.NewInt(0).Sub(z1, z2)
+	unit2.Sub(unit2, z0)
+	unit2.Lsh(unit2, uint(m2))
 	return unit1.Add(unit1, unit2).Add(unit1, z0)
 }
 
@@ -60,6 +59,9 @@ func main() {
 	x.SetString(j, 10)
 	y.SetString(k, 10)
 	start := time.Now()
-	karatsuba(x, y)
+	fmt.Printf("%d", karatsuba(x, y))
+	fmt.Printf("\n %s", time.Since(start))
+	start = time.Now()
+	fmt.Printf("%d", big.NewInt(0).Mul(x, y))
 	fmt.Printf("\n %s", time.Since(start))
 }

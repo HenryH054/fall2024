@@ -1,3 +1,8 @@
+# Homework 2
+
+## Problem 1
+
+```python
 def hexToBinary(s):
     mp = {'0': "0000",
           '1': "0001",
@@ -265,3 +270,59 @@ rk_rev = rk[::-1]
 cipher_text = input("Please enter what to decrpyt")
 text = binaryToHex(encrypt(cipher_text, rkb_rev, rk_rev))
 print("Plain Text : ", text)
+
+```
+
+## Problem 2
+
+![Example of my code running](decrypt.png)
+
+## Problem 3
+
+p=3, q=11, e=7, x=5
+
+n = p * q = 33
+
+$\phi$ = 2 * 10 = 20
+
+7 * d % 20 = 1
+
+d = 3
+
+private key: 33, 3
+public key: 33, 7
+
+c = 5 ^ 7 % 33 = 14
+
+Encrypted Value = 14
+
+m = 14 ^ 3 % 33 = 5
+
+Decrypted Value = 5
+
+
+## Problem 4
+
+n >= 217; n = p*q
+
+p = 17, q = 23
+
+$\phi$ = 16*22 = 352
+
+e = 31
+
+31 * d % 352 = 1
+
+d = 159
+
+Private Key = (391, 159)
+
+Public Key = (391, 31)
+
+217 ^ 31 % 391 = 89
+
+Encrypted = 89
+
+89^159 % 391 = 217
+
+Decripyted = 217

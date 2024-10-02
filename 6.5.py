@@ -32,7 +32,10 @@ def rselect(arr, low, high, k):
     else: 
         return rselect(arr, pivot_index + 1, high, k - rank)
 
-arr = [10, 4, 5, 8, 6, 11, 26]
+arr = []
+n=100
+for i in range(n):
+    arr.append(random.randint(1,9999))
 k = 3
 result = rselect(arr, 0, len(arr) - 1, k)
 print(f"The {k}rd smallest element is {result}")

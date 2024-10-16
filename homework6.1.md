@@ -4,8 +4,8 @@
 
 S $\rightarrow$ AB
 
-A $\rightarrow$ aAb | \lambda
+A $\rightarrow$ aAb | $\lambda$
 
-B $\rightarrow$ bBa | \lambda
+B $\rightarrow$ bBa | $\lambda$
 
 ## Problem 2

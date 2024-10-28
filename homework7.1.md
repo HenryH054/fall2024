@@ -2,6 +2,6 @@
 
 ## Problem 1
 
-S $/rightarrow$ BSA | BA | A
+S $\rightarrow$ BSA | BA | A
 
-A $/rightarrow$
+A $\rightarrow$

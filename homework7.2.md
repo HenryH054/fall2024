@@ -10,13 +10,13 @@ A $\rightarrow$ aAa | bAb | B
 
 B $\rightarrow$ aCb | bCa
 
-C $\rightarrow$ aC | bC | \lambda
+C $\rightarrow$ aC | bC | $\lambda$
 
 D $\rightarrow$ EF
 
-E $\rightarrow$ aEb | \lambda
+E $\rightarrow$ aEb | $\lambda$
 
-F $\rightarrow$ aF | \lambda
+F $\rightarrow$ aF | $\lambda$
 
 B)
 
@@ -26,29 +26,29 @@ A $\rightarrow$ aAa | bAb | B
 
 B $\rightarrow$ aCb | bCa
 
-C $\rightarrow$ aC | bC | \lambda
+C $\rightarrow$ aC | bC | $\lambda$
 
 D $\rightarrow$ EF
 
-E $\rightarrow$ aEb | \lambda
+E $\rightarrow$ aEb | $\lambda$
 
-F $\rightarrow$ aF | \lambda
+F $\rightarrow$ aF | $\lambda$
 
 C) 
 
-S $\rightarrow$ ASD | \lambda
+S $\rightarrow$ ASD | $\lambda$
 
 A $\rightarrow$ aAa | bAb | B
 
 B $\rightarrow$ aCb | bCa
 
-C $\rightarrow$ aC | bC | \lambda
+C $\rightarrow$ aC | bC | $\lambda$
 
 D $\rightarrow$ EF
 
-E $\rightarrow$ aEb | \lambda
+E $\rightarrow$ aEb | $\lambda$
 
-F $\rightarrow$ aF | \lambda
+F $\rightarrow$ aF | $\lambda$
 
 ## Problem 2
 

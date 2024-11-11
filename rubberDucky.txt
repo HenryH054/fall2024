@@ -1,0 +1,39 @@
+DELAY 1000
+
+GUI r
+
+DELAY 500
+
+STRING notepad.exe
+
+ENTER
+
+DELAY 1000
+
+STRING print("Hello World")
+
+ENTER
+
+STRING print("You Got memed on")
+
+ENTER
+
+STRING input()
+
+DELAY 500
+
+CONTROL SHIFT S
+
+DELAY 500
+
+STRING C:\Users\Public\file.py
+
+ENTER
+
+DELAY 1000
+
+GUI R
+
+DELAY 500
+
+python C:\Users\Public\file.py

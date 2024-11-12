@@ -68,7 +68,7 @@
 \draw [black] (21.1,-36.8) -- (26.97,-32.56);
 \fill [black] (26.97,-32.56) -- (26.03,-32.62) -- (26.61,-33.43);
 \draw [black] (61.98,-29.477) arc (144:-144:2.25);
-\draw (66.55,-30.8) node [right] {$1/1,\mbox{ }\leftarrow\mbox{ }|\mbox{ }0\0,\mbox{ }\leftarrow\mbox{ }|\mbox{ }Y/Y\mbox{ }\leftarrow$};
+\draw (66.55,-30.8) node [right] {$1/1,\mbox{ }\leftarrow\mbox{ }|\mbox{ }0/0,\mbox{ }\leftarrow\mbox{ }|\mbox{ }Y/Y\mbox{ }\leftarrow$};
 \fill [black] (61.98,-32.12) -- (62.33,-33) -- (62.92,-32.19);
 \draw [black] (56.3,-30.8) -- (32.4,-30.8);
 \fill [black] (32.4,-30.8) -- (33.2,-31.3) -- (33.2,-30.3);
@@ -96,18 +96,18 @@
 
 ## Problem 3
 
-1011
-q1 X011
-q2 X011
-q3 X0Y1
-q0 X0Y1
-q4 XXY1
-q4 XXY1
-no XXY1
+## 1011
+2) q1 X011
+3) q2 X011
+4) q3 X0Y1
+5) q0 X0Y1
+6) q4 XXY1
+7) q4 XXY1
+8) no XXY1
 
-10
-q1 x0
-q2 x0
-no x0
+## 10
+2) q1 x0
+3) q2 x0
+4) no x0
 
 ## Problem 4

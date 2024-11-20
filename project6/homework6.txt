@@ -1,0 +1,23 @@
+function BoundedKnapsackApproximation(items, W):
+    # items is a list of tuples (value, weight) for each item
+    # W is the knapsack capacity
+    
+    # Step 1: Sort items by value-to-weight ratio in descending order
+    items.sort_by(v_i / w_i for each item (v_i, w_i))
+    
+    # Step 2: Greedy selection (approximation solution)
+    total_value = 0
+    total_weight = 0
+    
+    for each item (v_i, w_i) in items:
+        if total_weight + w_i <= W:
+            total_value += v_i
+            total_weight += w_i
+        else:
+            break
+    
+    # Step 3: Find the most valuable item
+    V_max = max(v_i for each item (v_i, w_i) in items)
+    
+    # Step 4: Return the maximum of greedy solution or single valuable item
+    return max(total_value, V_max)

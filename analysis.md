@@ -1,0 +1,23 @@
+# Philippe Halsmann
+
+## A review of Philippe Halsmann life
+
+Halsmann lived in an interesting time considering he was born in 1906 Latvia and at the end of his he had taken pictures of Albert Einstein and had the cover photo for life magazine over 100 times. Which just by the beginning and end you can only assume what happened in the middle, but for a short synopsis. After being born in Latvia and living through World War One he got educated in electrical engineering, truly a useful skill, before contributing an immense amount to the culture through his photography. He started by going to France and having a flourishing career when a life already marred by World War One turned dark by the accusation and conviction for the Murder of his father. He then "escaped" from prison by having an immense amount of geopolitical pressure put on his captures by non other than Albert Einstein and Sigmund Freud, amongst many others. Eventually allowing him to be free. Then after this he had to flee from Europe because shortly after this freedom World War Two started and he emigrated to the US. In the US he continued his flourishing career as a photographer and became arguably one of the most influential photographers of his era.
+
+## An Analysis of his work
+
+Halsmann work is filled with influential politicians, actors, and scientists. As well as a host of pictures showing the chaotic nature inherent to our world. Often times in his portraits he would employee techniques that would display sides of people that they wouldn't otherwise expect. One such photos of these that I saw was of Richard Nixon. In this picture of Richard Nixon that one would expect to be filled with harsh shadows and a stern look upon Nixon's face it instead is Richard Nixon leaping through the air. A picture that I'm sure felt as foreign to the people at the time as if we saw a picture of Obama, Biden, Trump, or Kamala leaping through the air.
+
+In short though his body of work paints another side to history. When looking back, especially at people like Nixon, it's easy to pain their entire life by one choice or action. Looking at Halsmann work shows that their is a multitude of sides to history and the people that fill the history books. Life keeps moving on.
+
+## My Reaction
+
+My reaction has already been quite highlighted in the previous section but to reiterate. Halsmann work brings history alive. It shows me that people are not to be thrown away because of one action. We should consider the history and what happened. It also brings a valid point to my life. When people do something dumb or stupid is that who they are or was that for a moment. Are they typically a serious person posing for this picture or are they typically someone leaping and bounding but nearly being serious because of the stage of life they are in.
+
+## My review of Humphrey Bogart. Photo by Philippe Halsman.
+
+This particular image appears to be taken using studio lights. The lights appear to be fairly harsh but definitely could be harsher. Editing appears to be fairly minimal although it is worth noting that they don't try to bring everything towards a middle grey. It is also a black and white photo. The light is coming from in front of the subject although it is the side of the subjects face giving a front to semi-profile short Rembrandt lighting. The photo is taken from eye level with the subjects chin facing ever so slightly down using the jaw line as a placing line in the photo. In this photo the background is also fairly architecturally interesting although I don't have access to that and as such I will probably use a blank background or blurred background.
+
+In my image I attempted to recreate the photo as accurately as I could although I had struggles to match the dramatization of the lighting as I didn't have access to enough light sources. In Halsmann photo he has a bright studio light from the front of the subject but also a much lighter background light behind him. I was able to somewhat emulate that although I lost a lot of the deepness of the shadows. I also created the light triangle and again due to limitations of equipment I wasn't able to get it quite right, but I was able to get the general feel. The angle of the photo was relatively easy although one point of struggle that I didn't expect was the change in framing that happens between long and short hair. That actual head is largely in the same relative place in the photo but I had to make a judgement call as to what part of the framing was most important and I prioritized the central focus and bottom left corner.
+
+!(robert.png)[Humphrey Bogart. Photo by Philippe Halsman. 1949]

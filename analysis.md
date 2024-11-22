@@ -20,4 +20,4 @@ This particular image appears to be taken using studio lights. The lights appear
 
 In my image I attempted to recreate the photo as accurately as I could although I had struggles to match the dramatization of the lighting as I didn't have access to enough light sources. In Halsmann photo he has a bright studio light from the front of the subject but also a much lighter background light behind him. I was able to somewhat emulate that although I lost a lot of the deepness of the shadows. I also created the light triangle and again due to limitations of equipment I wasn't able to get it quite right, but I was able to get the general feel. The angle of the photo was relatively easy although one point of struggle that I didn't expect was the change in framing that happens between long and short hair. That actual head is largely in the same relative place in the photo but I had to make a judgement call as to what part of the framing was most important and I prioritized the central focus and bottom left corner.
 
-!(robert.png)[Humphrey Bogart. Photo by Philippe Halsman. 1949]
+![Humphrey Bogart. Photo by Philippe Halsman. 1949](Robert.png)
